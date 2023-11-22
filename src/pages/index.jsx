@@ -16,7 +16,7 @@ function Index(){
                     farming
                 </p>
             </div>
-            <img src={ImgHero} alt="" className='w-2/4 h-80 self-end pr-40 drop-shadow-2xl'/>
+            <img src={ImgHero} alt="" className='w-2/4 h-80 self-end pr-40'/>
         </div>
 
         <div className='h-72 my-10 px-28 flex'>
@@ -66,7 +66,7 @@ function Index(){
         <div className='h-96 flex my-10 mx-40 justify-between border-double border-4 rounded-lg shadow-xl'>
             <div className='flex justify-center items-center flex-col w-6/12 pl-10'>
                 <h1 className='text-6xl ml-4 py-4'>About Us</h1>
-                <p className='text-gray-500 text-base py-2'>
+                <p className='text-gray-500 text-base py-2 ml-10'>
                     "AgroEduConnect" menggambarkan platform sebagai sumber daya edukasi
                     yang menghubungkan komponen-komponen penting dalam pertanian untuk
                     menciptakan pemahaman yang lebih baik dan praktik yang lebih
