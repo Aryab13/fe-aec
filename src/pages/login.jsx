@@ -18,7 +18,7 @@ function Login() {
                     <label for="show" class="ms-2 text-sm font-medium">Show Password</label>
                 </div>
                 <button type="submit" class="text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Submit</button>
-                <p className="text-right">Don't have an account? <a href="register.html" className="text-green-600 hover:underline">Signup</a></p>
+                <p className="text-right">Don't have an account? <a href="#" className="text-green-600 hover:underline">Signup</a></p>
             </form>
         </>
     )
