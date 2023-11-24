@@ -15,15 +15,17 @@ function DetailLs() {
     <div className="p-10">
         <h1 className="text-4xl font-bold my-5 text-center">{name}</h1>
         <p className="text-xl text-gray-500 my-5 px-40 text-center">{description}</p>
-        <div>
-            <h5>{prof}</h5>
-            <p>{date}</p>
-            <p>{hour}</p>
-            <button>Enroll</button>
-            <button>Back</button>
-        </div>
-        <div>
-            <img src={imgUrl} alt=""/>
+        <div className="mx-40 my-20 flex justify-around items-center">
+            <div>
+                <h5 className="text-2xl mb-3">{prof}</h5>
+                <p className="mb-0 text-gray-500">{date}</p>
+                <p className="mb-10 text-gray-500">{hour}</p>
+                <button className="bg-green-600 px-3.5 py-1.5 text-white rounded-md hover:bg-green-700">Enroll Live Session</button>
+                <button className="bg-white px-3.5 py-1.5 outline outline-2 outline-red-500 rounded-md text-red-500 hover:bg-red-500 hover:text-white">Back</button>
+            </div>
+            <div>
+                <img src={imgUrl} alt=""/>
+            </div>
         </div>
     </div>
     <Footer/>
