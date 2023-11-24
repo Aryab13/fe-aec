@@ -15,7 +15,7 @@ function Footer() {
                             <a onClick={() => {navigate('/');window.scrollTo(0, 0);}} class="hover:underline cursor-pointer me-4 md:me-6">Home</a>
                         </li>
                         <li>
-                            <a class="hover:underline cursor-pointer me-4 md:me-6">Live Session</a>
+                            <a onClick={() => {navigate('/ls');window.scrollTo(0, 0);}} class="hover:underline cursor-pointer me-4 md:me-6">Live Session</a>
                         </li>
                         <li>
                             <a class="hover:underline cursor-pointer me-4 md:me-6">Articles</a>

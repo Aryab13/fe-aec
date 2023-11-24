@@ -19,7 +19,7 @@ function Index(){
                     farming
                 </p>
             </div>
-            <img src={ImgHero} alt="" className='w-2/4 h-80 self-end pr-40'/>
+            <img src={ImgHero} alt="" className='w-2/4 h-80 self-end pr-40 drop-shadow-2xl'/>
         </div>
 
         <div className='h-72 my-10 px-28 flex'>
