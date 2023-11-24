@@ -1,3 +1,5 @@
+import Navbar from "../components/navbar"
+import Footer from "../components/footer"
 import ImgHero from '../assets/hero.jpg'
 import ImgDesc from '../assets/desc.jpg'
 import ImgDesc2 from '../assets/desc2.jpg'
@@ -8,6 +10,7 @@ import ImgCard3 from '../assets/card3.jpg'
 function Index(){
     return(
         <>
+        <Navbar/>
         <div className='flex py-10'>
             <div className="pt-10 w-2/4 flex flex-col items-center justify-center">
                 <h1 className="text-6xl w-80 font-bold my-5">Stay Curious</h1>
@@ -75,6 +78,7 @@ function Index(){
             </div>
             <img src={ImgDesc2} alt="" className='w-80'/>
         </div>
+        <Footer/>
         </>
     )
 }

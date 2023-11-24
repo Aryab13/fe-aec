@@ -1,4 +1,14 @@
 function Login() {
+    
+    const togglePassword = () => {
+        var passwordInput = document.getElementById('password');
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+        } else {
+            passwordInput.type = 'password';
+        }
+    }
+
     return (
         <>
             <form class="max-w-sm mx-auto mt-36">
@@ -13,7 +23,7 @@ function Login() {
                 </div>
                 <div class="flex items-start mb-5">
                     <div class="flex items-center h-5">
-                    <input id="show" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-green-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-green-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required/>
+                    <input  onClick={togglePassword} id="show" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-green-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-green-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required/>
                     </div>
                     <label for="show" class="ms-2 text-sm font-medium">Show Password</label>
                 </div>

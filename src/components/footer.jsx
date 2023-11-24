@@ -1,4 +1,9 @@
+import {  useNavigate } from "react-router-dom";
+
 function Footer() {
+
+    const navigate = useNavigate();
+
     return (
         <>
         <footer class="bg-white shadow dark:bg-gray-900">
@@ -7,16 +12,16 @@ function Footer() {
                     <h1 className="text-xl font-bold text-white">AgroEduConnect</h1>
                     <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
                         <li>
-                            <a href="#" class="hover:underline me-4 md:me-6">Home</a>
+                            <a onClick={() => {navigate('/');window.scrollTo(0, 0);}} class="hover:underline cursor-pointer me-4 md:me-6">Home</a>
                         </li>
                         <li>
-                            <a href="#" class="hover:underline me-4 md:me-6">Live Session</a>
+                            <a class="hover:underline cursor-pointer me-4 md:me-6">Live Session</a>
                         </li>
                         <li>
-                            <a href="#" class="hover:underline me-4 md:me-6">Articles</a>
+                            <a class="hover:underline cursor-pointer me-4 md:me-6">Articles</a>
                         </li>
                         <li>
-                            <a href="#" class="hover:underline">Community</a>
+                            <a class="hover:underline cursor-pointer">Community</a>
                         </li>
                     </ul>
                 </div>
