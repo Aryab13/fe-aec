@@ -21,7 +21,39 @@ function Register () {
         }
       };
 
+      const handleSubmit = (e) => {
+        e.preventDefault();
       
+        const inputName = document.getElementById("username").value;
+        const inputEmail = document.getElementById("email").value;
+        const inputPassword = document.getElementById("password").value;
+      
+        
+        if (
+          inputName == "" &&
+        inputEmail == "" &&
+        inputPassword == ""
+        ) {
+          alert("Please fill the field");
+        } else {
+          fetcher({
+            endpoint: "user",
+            config: {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                name: inputName,
+                email: inputEmail,
+                password: inputPassword,
+              }),
+            },
+          });
+          alert("Register Successful");
+          navigate("/login");
+        }
+        };
 
     const togglePassword = () => {
         var passwordInput = document.getElementById('password');
@@ -34,7 +66,7 @@ function Register () {
 
     return (
         <>
-            <form class="max-w-sm mx-auto mt-24">
+            <form onSubmit={handleSubmit} class="max-w-sm mx-auto mt-24">
                 <h1 className='text-center text-3xl font-bold pb-6'>Register</h1>
                 <div class="mb-5">
                     <label for="email" class="block mb-2 text-base font-medium">Your Name</label>
