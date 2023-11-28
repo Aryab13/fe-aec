@@ -1,5 +1,57 @@
+import { useNavigate } from "react-router-dom";
+
 function Login() {
+
+    const navigate = useNavigate();
     
+    const BASE_API = "https://652ff3566c756603295dfc8e.mockapi.io";
+
+    const fetcher = async ({ endpoint = "", config = {} }) => {
+        let result = {
+          data: [],
+          error: {},
+        };
+      
+        try {
+          const response = await fetch(`${BASE_API}/${endpoint}`, config);
+          const data = await response.json();
+      
+          console.log(data, "data");
+      
+          result.data = data;
+        } catch (error) {
+          result.error = error;
+        }
+      
+        return result;
+      };
+
+      const handleSubmit = async (e) => {
+        e.preventDefault();
+      
+        const inputEmail = document.getElementById("email").value;
+        const inputPassword = document.getElementById("password").value;
+      
+        const { data } = await fetcher({
+          endpoint: "user",
+        });
+      
+        const isUserExist = data?.find(
+          (item) => item.email === inputEmail && item.password === inputPassword
+        );
+      
+        if (!isUserExist) return alert("Wrong Email or Password");
+      
+        localStorage.setItem(
+          "usr",
+          JSON.stringify({
+            id: isUserExist.id,
+            name: isUserExist.name,
+          })
+        );
+        navigate("/");
+      };
+
     const togglePassword = () => {
         var passwordInput = document.getElementById('password');
         if (passwordInput.type === 'password') {
@@ -11,7 +63,7 @@ function Login() {
 
     return (
         <>
-            <form class="max-w-sm mx-auto mt-36">
+            <form onSubmit={handleSubmit} class="max-w-sm mx-auto mt-36">
                 <h1 className='text-center text-3xl font-bold pb-6'>Sign In</h1>
                 <div class="mb-5">
                     <label for="email" class="block mb-2 text-base font-medium">Your email</label>
@@ -23,12 +75,12 @@ function Login() {
                 </div>
                 <div class="flex items-start mb-5">
                     <div class="flex items-center h-5">
-                    <input  onClick={togglePassword} id="show" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-green-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-green-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required/>
+                    <input  onClick={togglePassword} id="show" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-green-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-green-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"/>
                     </div>
                     <label for="show" class="ms-2 text-sm font-medium">Show Password</label>
                 </div>
                 <button type="submit" class="text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Submit</button>
-                <p className="text-right">Don't have an account? <a href="#" className="text-green-600 hover:underline">Signup</a></p>
+                <p className="text-right">Don't have an account? <a onClick={() => {navigate('/register');window.scrollTo(0, 0);}} className="text-green-600 hover:underline cursor-pointer">Signup</a></p>
             </form>
         </>
     )

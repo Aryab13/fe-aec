@@ -20,8 +20,10 @@ function DetailLs() {
                 <h5 className="text-2xl mb-3">{prof}</h5>
                 <p className="mb-0 text-gray-500">{date}</p>
                 <p className="mb-10 text-gray-500">{hour}</p>
+                <div className="flex flex-col gap-4">
                 <button className="bg-green-600 px-3.5 py-1.5 text-white rounded-md hover:bg-green-700">Enroll Live Session</button>
-                <button className="bg-white px-3.5 py-1.5 outline outline-2 outline-red-500 rounded-md text-red-500 hover:bg-red-500 hover:text-white">Back</button>
+                <button onClick={() => {navigate('/ls');window.scrollTo(0, 0);}} className="bg-white px-3.5 py-1.5 outline outline-2 outline-red-500 rounded-md text-red-500 hover:bg-red-500 hover:text-white">Back</button>
+                </div>
             </div>
             <div>
                 <img src={imgUrl} alt=""/>
