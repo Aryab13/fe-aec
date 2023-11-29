@@ -5,6 +5,7 @@ import Register from "./pages/register"
 import LiveSession from './pages/live-session'
 import DetailLs from './pages/detail-ls'
 import ForgotPass from './pages/forgot-pass'
+import Community from './pages/community'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Route element={<ForgotPass/>} path='/forgotpass'/>
         <Route element={<LiveSession/>} path='/ls'/>
         <Route element={<DetailLs/>} path='/detaills/:id'/>
+        <Route element={<Community/>} path='/community'/>
       </Routes>
     </BrowserRouter>
   )

@@ -21,7 +21,7 @@ function Footer() {
                             <a class="hover:underline cursor-pointer me-4 md:me-6">Articles</a>
                         </li>
                         <li>
-                            <a class="hover:underline cursor-pointer">Community</a>
+                            <a class="hover:underline cursor-pointer" onClick={() => {navigate('/community');window.scrollTo(0, 0);}}>Community</a>
                         </li>
                     </ul>
                 </div>

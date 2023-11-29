@@ -9,6 +9,11 @@ function DetailLs() {
     const {state} = location
     const {id, name, imgUrl, description, prof, date, hour} = state;
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        alert('Enroll Successful, Invitation will be sent to your email')
+    }
+
   return (
     <>
     <Navbar/>
@@ -21,7 +26,7 @@ function DetailLs() {
                 <p className="mb-0 text-gray-500">{date}</p>
                 <p className="mb-10 text-gray-500">{hour}</p>
                 <div className="flex flex-col gap-4">
-                <button className="bg-green-600 px-3.5 py-1.5 text-white rounded-md hover:bg-green-700">Enroll Live Session</button>
+                <button onClick={handleSubmit} className="bg-green-600 px-3.5 py-1.5 text-white rounded-md hover:bg-green-700">Enroll Live Session</button>
                 <button onClick={() => {navigate('/ls');window.scrollTo(0, 0);}} className="bg-white px-3.5 py-1.5 outline outline-2 outline-red-500 rounded-md text-red-500 hover:bg-red-500 hover:text-white">Back</button>
                 </div>
             </div>
