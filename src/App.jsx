@@ -6,6 +6,7 @@ import LiveSession from './pages/live-session'
 import DetailLs from './pages/detail-ls'
 import ForgotPass from './pages/forgot-pass'
 import Community from './pages/community'
+import Article from './pages/article'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route element={<LiveSession/>} path='/ls'/>
         <Route element={<DetailLs/>} path='/detaills/:id'/>
         <Route element={<Community/>} path='/community'/>
+        <Route element={<Article/>} path='/article'/>
       </Routes>
     </BrowserRouter>
   )

@@ -11,7 +11,7 @@ function Navbar() {
             <div className="flex gap-8">
                 <a className="transition font-bold ease-in-out delay-100 hover:text-green-600 cursor-pointer" onClick={() => {navigate('/');window.scrollTo(0, 0);}}>Home</a>
                 <a className="transition font-bold ease-in-out delay-100 hover:text-green-600 cursor-pointer" onClick={() => {navigate('/ls');window.scrollTo(0, 0);}}>Live Session</a>
-                <a className="transition font-bold ease-in-out delay-100 hover:text-green-600 cursor-pointer">Articles</a>
+                <a className="transition font-bold ease-in-out delay-100 hover:text-green-600 cursor-pointer" onClick={() => {navigate('/article');window.scrollTo(0, 0);}}>Articles</a>
                 <a className="transition font-bold ease-in-out delay-100 hover:text-green-600 cursor-pointer" onClick={() => {navigate('/community');window.scrollTo(0, 0);}}>Community</a>
             </div>
             <div className="flex gap-8">
