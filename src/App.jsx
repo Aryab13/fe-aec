@@ -7,6 +7,7 @@ import DetailLs from './pages/detail-ls'
 import ForgotPass from './pages/forgot-pass'
 import Community from './pages/community'
 import Article from './pages/article'
+import DetailArticle from './pages/detail-article'
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         <Route element={<DetailLs/>} path='/detaills/:id'/>
         <Route element={<Community/>} path='/community'/>
         <Route element={<Article/>} path='/article'/>
+        <Route element={<DetailArticle/>} path='/detailarticle/:id'/>
       </Routes>
     </BrowserRouter>
   )
