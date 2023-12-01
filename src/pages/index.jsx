@@ -11,7 +11,7 @@ function Index(){
     return(
         <>
         <Navbar/>
-        <div className='flex flex-col md:flex-row py-10 pt-32'>
+        <div className='flex flex-col md:flex-row py-10'>
             <div className="md:w-2/4 flex flex-col items-center justify-center">
                 <h1 className="text-4xl md:text-6xl w-80 font-bold my-5">Stay Curious</h1>
                 <p className="text-xl md:text-3xl text-gray-500 my-5 md:pl-44 md:pr-8">
