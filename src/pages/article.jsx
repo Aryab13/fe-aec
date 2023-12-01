@@ -27,7 +27,7 @@ function Article() {
   return (
     <>
         <Navbar/>
-        <div className="grid grid-cols-2 m-8">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 m-4">
         {
             data && data.map((item,index) => (
                 <div>

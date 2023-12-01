@@ -27,11 +27,11 @@ function DetailLs() {
   return (
     <>
     <Navbar/>
-    <div className="p-10">
+    <div className="p-5 md:p-10">
         <h1 className="text-4xl font-bold my-5 text-center">{name}</h1>
-        <p className="text-xl text-gray-500 my-5 px-40 text-center">{description}</p>
-        <div className="mx-40 my-20 flex justify-around items-center">
-            <div>
+        <p className="text-xl text-gray-500 my-5 px-4 md:px-40 text-center">{description}</p>
+        <div className="flex flex-col md:flex-row mx-4 md:mx-40 my-20 items-center justify-center md:justify-around">
+            <div className="mb-8 md:mb-0">
                 <h5 className="text-2xl mb-3">{prof}</h5>
                 <p className="mb-0 text-gray-500">{date}</p>
                 <p className="mb-10 text-gray-500">{hour}</p>
@@ -58,7 +58,7 @@ function DetailLs() {
                 </div>
             </div>
             <div>
-                <img src={imgUrl} alt=""/>
+                <img src={imgUrl} alt="" className="w-full md:w-auto h-40 md:h-auto object-cover"/>
             </div>
         </div>
     </div>
