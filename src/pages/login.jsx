@@ -1,10 +1,14 @@
 import { useNavigate } from "react-router-dom";
+import React, { useState } from 'react';
 
 function Login() {
 
     const navigate = useNavigate();
     
     const BASE_API = "https://652ff3566c756603295dfc8e.mockapi.io";
+
+    const [isLoggedIn, setLoggedIn] = useState(false);
+    const [username, setUsername] = useState("");
 
     const fetcher = async ({ endpoint = "", config = {} }) => {
         let result = {
@@ -49,6 +53,10 @@ function Login() {
             name: isUserExist.name,
           })
         );
+
+        setLoggedIn(true);
+        setUsername(isUserExist.name);
+
         navigate("/");
       };
 
